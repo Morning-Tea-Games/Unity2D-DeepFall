@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5113158765c8544496f7bbfd563540e, type: 3}
+  m_Name: SnakeEnemy
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: "\u041C\u043E\u043D\u0441\u0442\u0440\u044B \u0441 \u0442\u0435\u043B\u043E\u043C
+    \u0437\u043C\u0435\u0438"
+  <Health>k__BackingField: 50
+  <Damage>k__BackingField: 10
+  <Speed>k__BackingField: 8
+  <Prefab>k__BackingField: {fileID: 5553798557267364024, guid: 3f4c45abf2987a34dad9b6e0a5412470,
+    type: 3}
