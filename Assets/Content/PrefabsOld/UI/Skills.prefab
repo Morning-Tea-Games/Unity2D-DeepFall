@@ -297,8 +297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0f612d54ec8ca5489fd67ba39024100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultSkillLabel: "\u0442\u0432\u043E\u044F \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043A\u0430
-    - {0}"
+  _defaultSkillLabel: "\u041D\u0435\u0442 \u0430\u043A\u0442\u0438\u0432\u043D\u043E\u0433\u043E
+    \u0441\u043A\u0438\u043B\u043B\u0430 - {0}"
   _skillFields:
   - {fileID: 4292233218323437648}
   - {fileID: 4418663393030496540}
@@ -581,9 +581,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c92d651ad506394bb353cfc377f18df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NameField: {fileID: 1823308596824710054}
-  DescriptionField: {fileID: 7228368088815317380}
-  Button: {fileID: 2840509550317792534}
+  <NameField>k__BackingField: {fileID: 1823308596824710054}
+  <DescriptionField>k__BackingField: {fileID: 7228368088815317380}
+  <Button>k__BackingField: {fileID: 2840509550317792534}
+  CurrentEvent: 0
 --- !u!1 &4240658248643604781
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,9 +990,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c92d651ad506394bb353cfc377f18df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NameField: {fileID: 7305809568607172014}
-  DescriptionField: {fileID: 7213953115420647355}
-  Button: {fileID: 331410949607995878}
+  <NameField>k__BackingField: {fileID: 7305809568607172014}
+  <DescriptionField>k__BackingField: {fileID: 7213953115420647355}
+  <Button>k__BackingField: {fileID: 331410949607995878}
+  CurrentEvent: 0
 --- !u!1 &4590555492958183116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,9 +1397,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c92d651ad506394bb353cfc377f18df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NameField: {fileID: 6655970887364679672}
-  DescriptionField: {fileID: 1145990889327752531}
-  Button: {fileID: 6747646540449111971}
+  <NameField>k__BackingField: {fileID: 6655970887364679672}
+  <DescriptionField>k__BackingField: {fileID: 1145990889327752531}
+  <Button>k__BackingField: {fileID: 6747646540449111971}
+  CurrentEvent: 0
 --- !u!1 &6896352184361521744
 GameObject:
   m_ObjectHideFlags: 0

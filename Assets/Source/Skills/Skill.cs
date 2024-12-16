@@ -2,13 +2,11 @@ namespace Skills
 {
     public class Skill
     {
-        public string Name { get; }
-        public string Description { get; }
+        public SkillSO Param { get; }
 
-        public Skill(string name, string description)
+        public Skill(SkillSO param)
         {
-            Name = name;
-            Description = description;
+            Param = param;
         }
     }
 }

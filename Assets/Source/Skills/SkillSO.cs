@@ -10,5 +10,8 @@ namespace Skills
 
         [field: SerializeField]
         public string Description { get; private set; }
+
+        [field: SerializeField]
+        public SkillEvent Event;
     }
 }

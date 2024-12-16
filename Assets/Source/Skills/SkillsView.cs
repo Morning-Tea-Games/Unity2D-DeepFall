@@ -6,6 +6,7 @@ namespace Skills
 {
     public class SkillsView : MonoBehaviour
     {
+        public event Action Reroll;
         public int SkillsCount => _skillButtons.Length;
         public int SkillsPoolZize => _skillFields.Length;
         public int ActivatedSkillCount { get; private set; }
@@ -69,14 +70,22 @@ namespace Skills
 
             for (int i = 0; i < _skillButtons.Length; i++)
             {
-                _skillButtons[i].NameField.text = skills[i].Name;
-                _skillButtons[i].DescriptionField.text = skills[i].Description;
+                _skillButtons[i].NameField.text = skills[i].Param.Name;
+                _skillButtons[i].DescriptionField.text = skills[i].Param.Description;
+                _skillButtons[i].CurrentEvent = skills[i].Param.Event;
             }
         }
 
         private void ChoiseSkill(SkillButton skill)
         {
             Debug.Log($"Выбран скилл {skill.NameField.text}");
+
+            if (skill.CurrentEvent == SkillEvent.Reroll)
+            {
+                Reroll.Invoke();
+                return;
+            }
+
             Hide();
             ActivatedSkillCount++;
 

@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab29ac7610ffe4e4b8c001634a5177e9, type: 3}
-  m_Name: TestSkill
+  m_Name: Reroll
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: DemoSkill
-  <Description>k__BackingField: Just demo
+  <Name>k__BackingField: "\u0414\u0440\u0443\u0433\u043E\u0439 \u0432\u044B\u0431\u043E\u0440"
+  <Description>k__BackingField: "\u041F\u043E\u043C\u0435\u043D\u044F\u0442\u044C
+    \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F"
+  Event: 13

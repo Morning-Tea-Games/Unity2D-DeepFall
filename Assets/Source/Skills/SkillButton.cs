@@ -8,13 +8,16 @@ namespace Skills
     public class SkillButton : MonoBehaviour
     {
         [field: SerializeField]
-        public TMP_Text NameField;
+        public TMP_Text NameField { get; private set; }
 
         [field: SerializeField]
-        public TMP_Text DescriptionField;
+        public TMP_Text DescriptionField { get; private set; }
 
         [field: SerializeField]
-        public Button Button;
+        public Button Button { get; private set; }
+
+        [field: SerializeField]
+        public SkillEvent CurrentEvent;
 
         private void OnValidate()
         {

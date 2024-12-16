@@ -19,11 +19,13 @@ namespace Skills
         public void Subscribe()
         {
             _expBank.OnExpChanged += NewLevel;
+            _view.Reroll += Reroll;
         }
 
         public void Unsubscribe()
         {
             _expBank.OnExpChanged -= NewLevel;
+            _view.Reroll -= Reroll;
         }
 
         private void NewLevel(int level, float exp)
@@ -35,7 +37,7 @@ namespace Skills
             }
 
             _previousLevel = level;
-            _view.SetSkills(GenerateSkills(_view.SkillsCount));
+            Reroll();
             _view.Show();
         }
 
@@ -46,11 +48,16 @@ namespace Skills
             for (int i = 0; i < count; i++)
             {
                 var randomSkill = _skillPool[Random.Range(0, _skillPool.Length)];
-                Debug.Log("Skill:" + randomSkill);
-                skills[i] = new Skill(randomSkill.Name, randomSkill.Description);
+                //Debug.Log("Skill:" + randomSkill);
+                skills[i] = new Skill(randomSkill);
             }
 
             return skills;
+        }
+
+        public void Reroll()
+        {
+            _view.SetSkills(GenerateSkills(_view.SkillsCount));
         }
     }
 }
