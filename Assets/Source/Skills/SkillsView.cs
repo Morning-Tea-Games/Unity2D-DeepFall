@@ -23,8 +23,13 @@ namespace Skills
         [SerializeField]
         private GameObject _skillPanel;
 
+        [SerializeField]
+        private PauseManager _pause;
+
         private void Awake()
         {
+            _pause = FindAnyObjectByType<PauseManager>();
+
             Hide();
 
             for (int i = 0; i < _skillFields.Length; i++)
@@ -39,6 +44,9 @@ namespace Skills
             {
                 button.Button.onClick.AddListener(() => ChoiseSkill(button));
             }
+
+            _pause.Show(false);
+            _pause.Permanent = true;
         }
 
         private void OnDisable()
@@ -47,6 +55,9 @@ namespace Skills
             {
                 button.Button.onClick.RemoveAllListeners();
             }
+
+            _pause.Permanent = false;
+            _pause.Hide();
         }
 
         public void Show()
