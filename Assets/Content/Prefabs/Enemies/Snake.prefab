@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 276307454195139685}
   - component: {fileID: 3678635618390210924}
   - component: {fileID: 2151953602762358204}
+  - component: {fileID: 5725675231636104096}
+  - component: {fileID: 5316333617128723625}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Untagged
@@ -170,3 +172,42 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &5725675231636104096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124406855140414583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1beaf37f41b1f894bbf6a6dada9b47d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 1237620521027270704}
+--- !u!114 &5316333617128723625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124406855140414583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eefc296eeeee63b41921c7b6d7d431dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Rb>k__BackingField: {fileID: 2151953602762358204}
+  <CurrentHealth>k__BackingField: 50
+  _animator: {fileID: 276307454195139685}
+  _property: {fileID: 11400000, guid: cd40c8abd5d08ce4d910aa9112b9648c, type: 2}
+  _playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  _bulletLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  _expPrefab: {fileID: 5099229997847747447, guid: d762bbe8f0d00164b846f9228aa47ba0,
+    type: 3}
+  _redImpulse: {fileID: 5725675231636104096}
+  _spriteRenderer: {fileID: 1237620521027270704}
