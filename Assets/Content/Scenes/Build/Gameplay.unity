@@ -1269,7 +1269,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1038780479}
-  _avaibleSkills: []
+  _avaibleSkills:
+  - {fileID: 11400000, guid: 0d0ed091cda59cb408da160d2ad700c1, type: 2}
   _skillsViewPrefab: {fileID: 2591921976794530241, guid: 0b3bd101ff7817946ab2fcb29f401e80,
     type: 3}
   _skillsViewParent: {fileID: 107685758}

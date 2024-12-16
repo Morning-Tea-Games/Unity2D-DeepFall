@@ -45,7 +45,9 @@ namespace Skills
 
             for (int i = 0; i < count; i++)
             {
-                skills[i] = new Skill($"Скилл {i}", $"Описание скилла {i}");
+                var randomSkill = _skillPool[Random.Range(0, _skillPool.Length)];
+                Debug.Log("Skill:" + randomSkill);
+                skills[i] = new Skill(randomSkill.Name, randomSkill.Description);
             }
 
             return skills;
