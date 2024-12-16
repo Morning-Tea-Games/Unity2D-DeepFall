@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 4918584987864130587}
   - component: {fileID: 2961129047634478755}
   - component: {fileID: -1771715136446872358}
-  m_Layer: 0
+  - component: {fileID: 2975285558244158973}
+  - component: {fileID: 7625805923042400002}
+  m_Layer: 7
   m_Name: CoralMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,3 +172,42 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2975285558244158973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2645821273577251128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1beaf37f41b1f894bbf6a6dada9b47d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 8419870332936219511}
+--- !u!114 &7625805923042400002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2645821273577251128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eefc296eeeee63b41921c7b6d7d431dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Rb>k__BackingField: {fileID: -1771715136446872358}
+  <CurrentHealth>k__BackingField: 100
+  _animator: {fileID: 4918584987864130587}
+  _property: {fileID: 11400000, guid: 3851837a2be93824d9fe05354d7ec524, type: 2}
+  _playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  _bulletLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  _expPrefab: {fileID: 5099229997847747447, guid: d762bbe8f0d00164b846f9228aa47ba0,
+    type: 3}
+  _redImpulse: {fileID: 2975285558244158973}
+  _spriteRenderer: {fileID: 8419870332936219511}
