@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4786542035648795715}
   - component: {fileID: 6580229062371904459}
   - component: {fileID: -9049689481435317901}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RuinShip.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

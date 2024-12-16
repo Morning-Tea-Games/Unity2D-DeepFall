@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4095469647724287330}
   - component: {fileID: 9117119931813581603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Scroll.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

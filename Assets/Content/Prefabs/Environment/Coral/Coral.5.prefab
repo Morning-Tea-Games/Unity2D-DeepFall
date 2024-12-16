@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1199328661644820497}
   - component: {fileID: 1860984048219915734}
   - component: {fileID: 5063991193549598787}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coral.5
   m_TagString: Untagged
   m_Icon: {fileID: 0}

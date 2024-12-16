@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6503486910403004}
   - component: {fileID: 1425345366512532295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Seashell.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

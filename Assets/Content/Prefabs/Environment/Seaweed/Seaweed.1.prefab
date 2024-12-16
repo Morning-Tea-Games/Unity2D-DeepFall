@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2430922737588386589}
   - component: {fileID: 7643611056625525472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Seaweed.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
