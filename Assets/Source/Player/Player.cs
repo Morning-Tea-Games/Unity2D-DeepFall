@@ -64,6 +64,11 @@ public class Player : MonoBehaviour
         }
 
         _animator.SetInteger("MoveY", (int)vector.y);
+
+        if (vector == Vector2.zero)
+        {
+            Rb.velocity = Vector2.zero;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

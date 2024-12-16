@@ -90,8 +90,8 @@ public class Enemy : MonoBehaviour
                 _property
             );
             activityHandler.Execute();
-            _cooldown = _property.AttackDelay; // Do update coldown
-            _animator.SetTrigger("Attack");
+            _cooldown = _property.AttackDelay; // Do update cooldown
+            SetAnimatorTriggerSafe("Attack");
         }
     }
 
@@ -136,7 +136,7 @@ public class Enemy : MonoBehaviour
         );
         activityHandler.Execute();
         Flip(direction);
-        _animator.SetBool("IsRunning", true);
+        SetAnimatorBoolSafe("IsRunning", true);
     }
 
     public void MoveWithOffense(Transform target, Vector2 direction)
@@ -197,6 +197,32 @@ public class Enemy : MonoBehaviour
         else if (direction.x > 0)
         {
             _spriteRenderer.flipX = true;
+        }
+    }
+
+    private bool AnimatorHasParameter(string paramName)
+    {
+        foreach (var param in _animator.parameters)
+        {
+            if (param.name == paramName)
+                return true;
+        }
+        return false;
+    }
+
+    private void SetAnimatorTriggerSafe(string paramName)
+    {
+        if (AnimatorHasParameter(paramName))
+        {
+            _animator.SetTrigger(paramName);
+        }
+    }
+
+    private void SetAnimatorBoolSafe(string paramName, bool value)
+    {
+        if (AnimatorHasParameter(paramName))
+        {
+            _animator.SetBool(paramName, value);
         }
     }
 }
