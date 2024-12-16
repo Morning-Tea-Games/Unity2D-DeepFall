@@ -4,9 +4,15 @@ using UnityEngine;
 public class InputListener : MonoBehaviour
 {
     public bool Enabled { get; set; } = true;
-    [SerializeField] private Player _player;
-    [SerializeField] private VignetteEffect _vignette;
-    [SerializeField] private PauseManager _pauseManager;
+
+    [SerializeField]
+    private Player _player;
+
+    [SerializeField]
+    private VignetteEffect _vignette;
+
+    [SerializeField]
+    private PauseManager _pauseManager;
     private bool _readyToShoot = true;
     private bool _canMove = true;
 
@@ -46,26 +52,35 @@ public class InputListener : MonoBehaviour
             return;
         }
 
-        _player.PlayerMovment.Move(_player.Rb, new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")), _player.Speed);
+        _player.PlayerMovment.Move(
+            _player.Rb,
+            new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized,
+            _player.Speed
+        );
     }
 
     private void Shooting()
     {
-        if (!_readyToShoot) return;
+        if (!_readyToShoot)
+            return;
 
         if (Input.GetButton("Fire1"))
         {
-            _player.BulletSpawner.Spawn(_player.transform.position, _player.Bullet.Prefab.GetComponent<Bullet>(), Input.mousePosition); // TODO: not use GetComponent
+            _player.BulletSpawner.Spawn(
+                _player.transform.position,
+                _player.Bullet.Prefab.GetComponent<Bullet>(),
+                Input.mousePosition
+            ); // TODO: not use GetComponent
             StartCoroutine(Cooldown());
         }
     }
 
     private IEnumerator Cooldown()
-	{
-		_readyToShoot = false;
-		yield return new WaitForSeconds(_player.Bullet.Cooldown);
-		_readyToShoot = true;
-	}
+    {
+        _readyToShoot = false;
+        yield return new WaitForSeconds(_player.Bullet.Cooldown);
+        _readyToShoot = true;
+    }
 
     private IEnumerator FreezeRoutine(float duration)
     {

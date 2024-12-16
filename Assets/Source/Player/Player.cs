@@ -3,26 +3,72 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
-	[field: SerializeField] public float Speed { get; private set; } = 5f;
-    [field: SerializeField] public Rigidbody2D Rb { get; private set; }
-	[field: SerializeField] public BulletType Bullet { get; private set; }
-    [field: SerializeField] public HealthController Health { get; private set; }
-	public RigidbodyMovement2D PlayerMovment { get; private set; }
-	public BulletSpawner BulletSpawner { get; private set; }
-    public ExpBank Expirience { get; private set; }
-    [SerializeField] private ExpBar _expBar;
-    [SerializeField] private LayerMask _expLayer;
-    [SerializeField] private LayerMask _healLayer;
+    [field: SerializeField]
+    public float Speed { get; private set; } = 5f;
 
-    private void OnValidate() => Rb = GetComponent<Rigidbody2D>();
+    [field: SerializeField]
+    public Rigidbody2D Rb { get; private set; }
+
+    [SerializeField]
+    private Animator _animator;
+
+    [field: SerializeField]
+    public BulletType Bullet { get; private set; }
+
+    [field: SerializeField]
+    public HealthController Health { get; private set; }
+    public RigidbodyMovement2D PlayerMovment { get; private set; }
+    public BulletSpawner BulletSpawner { get; private set; }
+    public ExpBank Expirience { get; private set; }
+
+    [SerializeField]
+    private ExpBar _expBar;
+
+    [SerializeField]
+    private LayerMask _expLayer;
+
+    [SerializeField]
+    private LayerMask _healLayer;
+
+    private void OnValidate()
+    {
+        Rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+    }
 
     private void Awake()
     {
         PlayerMovment = new RigidbodyMovement2D();
-		BulletSpawner = new BulletSpawner();
+        BulletSpawner = new BulletSpawner();
         Expirience = new ExpBank(level: 0, exp: 0);
 
         _expBar.Construct(Expirience);
+        PlayerMovment.OnMove += HandleAnimation;
+    }
+
+    private void HandleAnimation(Vector2 vector)
+    {
+        if (vector.x > 0)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else if (vector.x < 0)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+
+        if (Mathf.Abs(vector.x) > 0f)
+        {
+            _animator.SetInteger("MoveY", -1);
+            return;
+        }
+
+        _animator.SetInteger("MoveY", (int)vector.y);
+
+        if (vector == Vector2.zero)
+        {
+            Rb.velocity = Vector2.zero;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
