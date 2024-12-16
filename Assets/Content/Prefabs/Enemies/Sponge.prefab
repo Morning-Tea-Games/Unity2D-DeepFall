@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 5030718697833511846}
   - component: {fileID: 7143270825764263151}
   - component: {fileID: 5659703417636764724}
-  m_Layer: 0
+  - component: {fileID: 2125103425852333416}
+  - component: {fileID: 5431552393475495316}
+  m_Layer: 7
   m_Name: Sponge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,3 +172,42 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2125103425852333416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3567518916593929972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1beaf37f41b1f894bbf6a6dada9b47d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 4488098416848364136}
+--- !u!114 &5431552393475495316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3567518916593929972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eefc296eeeee63b41921c7b6d7d431dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Rb>k__BackingField: {fileID: 5659703417636764724}
+  <CurrentHealth>k__BackingField: 100
+  _animator: {fileID: 5030718697833511846}
+  _property: {fileID: 11400000, guid: 76ecc0f8fe731e34f923fab1492ebb4b, type: 2}
+  _playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  _bulletLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  _expPrefab: {fileID: 5099229997847747447, guid: d762bbe8f0d00164b846f9228aa47ba0,
+    type: 3}
+  _redImpulse: {fileID: 2125103425852333416}
+  _spriteRenderer: {fileID: 4488098416848364136}
