@@ -6,6 +6,13 @@ namespace Skills
 {
     public class SkillsView : MonoBehaviour
     {
+        public int SkillsCount => _skillButtons.Length;
+        public int SkillsPoolZize => _skillFields.Length;
+        public int ActivatedSkillCount { get; private set; }
+
+        [SerializeField]
+        private string _defaultSkillLabel;
+
         [SerializeField]
         private TMP_Text[] _skillFields;
 
@@ -18,6 +25,11 @@ namespace Skills
         private void Awake()
         {
             Hide();
+
+            for (int i = 0; i < _skillFields.Length; i++)
+            {
+                _skillFields[i].text = string.Format(_defaultSkillLabel, i);
+            }
         }
 
         private void OnEnable()
@@ -28,7 +40,13 @@ namespace Skills
             }
         }
 
-        private void OnDisable() { }
+        private void OnDisable()
+        {
+            foreach (var button in _skillButtons)
+            {
+                button.Button.onClick.RemoveAllListeners();
+            }
+        }
 
         public void Show()
         {
@@ -60,6 +78,16 @@ namespace Skills
         {
             Debug.Log($"Выбран скилл {skill.NameField.text}");
             Hide();
+            ActivatedSkillCount++;
+
+            for (int i = 0; i < _skillFields.Length; i++)
+            {
+                if (_skillFields[i].text == string.Format(_defaultSkillLabel, i))
+                {
+                    _skillFields[i].text = skill.NameField.text;
+                    return;
+                }
+            }
         }
     }
 }

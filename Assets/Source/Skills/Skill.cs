@@ -2,7 +2,13 @@ namespace Skills
 {
     public class Skill
     {
-        public string Name { get; private set; }
-        public string Description { get; private set; }
+        public string Name { get; }
+        public string Description { get; }
+
+        public Skill(string name, string description)
+        {
+            Name = name;
+            Description = description;
+        }
     }
 }
