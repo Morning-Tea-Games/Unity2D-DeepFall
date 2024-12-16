@@ -48,6 +48,21 @@ public class Player : MonoBehaviour
 
     private void HandleAnimation(Vector2 vector)
     {
+        if (vector.x > 0)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else if (vector.x < 0)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+
+        if (Mathf.Abs(vector.x) > 0f)
+        {
+            _animator.SetInteger("MoveY", -1);
+            return;
+        }
+
         _animator.SetInteger("MoveY", (int)vector.y);
     }
 

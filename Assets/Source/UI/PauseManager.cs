@@ -2,32 +2,22 @@ using UnityEngine;
 
 public class PauseManager : MonoBehaviour
 {
-	public GameObject PausePanel;
+    public GameObject PausePanel;
 
-	private void Start()
-	{
-        PausePanel.SetActive(false);
-    }
-
-    private void Update()
+    private void Start()
     {
-        if (PausePanel.activeSelf)
-        {
-            Time.timeScale = 0;
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }
+        PausePanel.SetActive(false);
     }
 
     public void Show()
-	{
+    {
         PausePanel.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void Hide()
-	{
+    {
         PausePanel.SetActive(false);
+        Time.timeScale = 1;
     }
 }
