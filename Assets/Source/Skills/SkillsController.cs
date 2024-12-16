@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Skills
@@ -6,10 +7,10 @@ namespace Skills
     {
         private readonly SkillsView _view;
         private readonly ExpBank _expBank;
-        private readonly SkillSO[] _skillPool;
+        private readonly List<SkillSO> _skillPool;
         private int _previousLevel = 0;
 
-        public SkillsController(SkillsView view, ExpBank expBank, SkillSO[] skillPool)
+        public SkillsController(SkillsView view, ExpBank expBank, List<SkillSO> skillPool)
         {
             _view = view;
             _expBank = expBank;
@@ -41,15 +42,20 @@ namespace Skills
             _view.Show();
         }
 
-        private Skill[] GenerateSkills(int count)
+        private Skill[] GenerateSkills(int count, List<SkillSO> data)
         {
             var skills = new Skill[count];
+            var awaible = new List<SkillSO>();
+
+            awaible.AddRange(data);
 
             for (int i = 0; i < count; i++)
             {
-                var randomSkill = _skillPool[Random.Range(0, _skillPool.Length)];
-                //Debug.Log("Skill:" + randomSkill);
+                var index = Random.Range(0, awaible.Count);
+                var randomSkill = awaible[index];
+
                 skills[i] = new Skill(randomSkill);
+                awaible.Remove(randomSkill);
             }
 
             return skills;
@@ -57,7 +63,7 @@ namespace Skills
 
         public void Reroll()
         {
-            _view.SetSkills(GenerateSkills(_view.SkillsCount));
+            _view.SetSkills(GenerateSkills(_view.SkillsCount, _skillPool));
         }
     }
 }

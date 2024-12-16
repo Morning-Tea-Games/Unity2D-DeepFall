@@ -13,6 +13,7 @@ public class InputListener : MonoBehaviour
 
     [SerializeField]
     private PauseManager _pauseManager;
+
     private bool _readyToShoot = true;
     private bool _canMove = true;
 
@@ -23,8 +24,12 @@ public class InputListener : MonoBehaviour
             return;
         }
 
-        Movement();
-        Shooting();
+        if (!_pauseManager.Paused)
+        {
+            Movement();
+            Shooting();
+        }
+
         PauseHandler();
     }
 

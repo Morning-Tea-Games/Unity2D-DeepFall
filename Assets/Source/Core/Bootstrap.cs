@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Skills;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ namespace Core
         private Player _player;
 
         [SerializeField]
-        private SkillSO[] _avaibleSkills;
+        private List<SkillSO> _avaibleSkills;
 
         [SerializeField]
         private GameObject _skillsViewPrefab;

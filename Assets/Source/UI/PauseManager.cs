@@ -4,6 +4,7 @@ public class PauseManager : MonoBehaviour
 {
     public GameObject PausePanel;
     public bool Permanent;
+    public bool Paused;
 
     private void Start()
     {
@@ -14,6 +15,7 @@ public class PauseManager : MonoBehaviour
     {
         PausePanel.SetActive(withPausePanel);
         Time.timeScale = 0;
+        Paused = true;
     }
 
     public void Hide()
@@ -25,5 +27,6 @@ public class PauseManager : MonoBehaviour
 
         PausePanel.SetActive(false);
         Time.timeScale = 1;
+        Paused = false;
     }
 }

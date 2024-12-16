@@ -1272,6 +1272,7 @@ MonoBehaviour:
   _avaibleSkills:
   - {fileID: 11400000, guid: 0d0ed091cda59cb408da160d2ad700c1, type: 2}
   - {fileID: 11400000, guid: 9f787dc1e215dfa49a9a9947b0b313d0, type: 2}
+  - {fileID: 11400000, guid: 3d50d216bcac1b74fac2383a860511ec, type: 2}
   _skillsViewPrefab: {fileID: 2591921976794530241, guid: 0b3bd101ff7817946ab2fcb29f401e80,
     type: 3}
   _skillsViewParent: {fileID: 107685758}

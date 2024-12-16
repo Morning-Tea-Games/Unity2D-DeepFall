@@ -97,6 +97,12 @@ namespace Skills
                 return;
             }
 
+            if (skill.CurrentEvent == SkillEvent.Skip)
+            {
+                Hide();
+                return;
+            }
+
             Hide();
             ActivatedSkillCount++;
 

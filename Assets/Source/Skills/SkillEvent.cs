@@ -2,6 +2,7 @@ namespace Skills
 {
     public enum SkillEvent
     {
+        Skip = -1,
         None = 0,
         MultiBullet = 1,
         MoveSpeed = 2,
