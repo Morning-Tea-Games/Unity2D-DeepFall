@@ -2,12 +2,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [field: SerializeField] public BulletType BulletType { get; private set; }
+    [field: SerializeField]
+    public BulletType BulletType { get; private set; }
     private Vector3 _direction;
 
-    private void OnEnable() => Destroy(gameObject, BulletType.Lifetime);
-
-    private void Start() => SoundManager.Instance.PlaySound("Shot");
+    private void OnEnable()
+    {
+        SoundManager.Instance.PlaySound("Shot");
+        Destroy(gameObject, BulletType.Lifetime);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {

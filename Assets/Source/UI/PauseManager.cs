@@ -3,22 +3,30 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
     public GameObject PausePanel;
+    public bool Permanent;
+    public bool Paused;
 
     private void Start()
     {
-        PausePanel.SetActive(false);
-        Time.timeScale = 1;
+        Hide();
     }
 
-    public void Show()
+    public void Show(bool withPausePanel = true)
     {
-        PausePanel.SetActive(true);
+        PausePanel.SetActive(withPausePanel);
         Time.timeScale = 0;
+        Paused = true;
     }
 
     public void Hide()
     {
+        if (Permanent)
+        {
+            return;
+        }
+
         PausePanel.SetActive(false);
         Time.timeScale = 1;
+        Paused = false;
     }
 }

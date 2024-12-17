@@ -1,4 +1,5 @@
 using System.Collections;
+using Skills;
 using UnityEngine;
 
 public class InputListener : MonoBehaviour
@@ -13,6 +14,7 @@ public class InputListener : MonoBehaviour
 
     [SerializeField]
     private PauseManager _pauseManager;
+
     private bool _readyToShoot = true;
     private bool _canMove = true;
 
@@ -23,14 +25,18 @@ public class InputListener : MonoBehaviour
             return;
         }
 
-        Movement();
-        Shooting();
+        if (!_pauseManager.Paused)
+        {
+            Movement();
+            Shooting();
+        }
+
         PauseHandler();
     }
 
     private void PauseHandler()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !_pauseManager.Permanent)
         {
             if (_pauseManager.isActiveAndEnabled)
             {
@@ -55,7 +61,7 @@ public class InputListener : MonoBehaviour
         _player.PlayerMovment.Move(
             _player.Rb,
             new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized,
-            _player.Speed
+            _player.Speed * SkillProcessHandler.Instance.PlayerMovementSpeedModifier
         );
     }
 
