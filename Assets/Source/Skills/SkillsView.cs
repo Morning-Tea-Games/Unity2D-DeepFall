@@ -103,6 +103,18 @@ namespace Skills
                 return;
             }
 
+            if (skill.CurrentEvent == SkillEvent.MoveSpeed)
+            {
+                if (SkillProcessHandler.Instance.PlayerMovementSpeedModifier == 1f)
+                {
+                    SkillProcessHandler.Instance.PlayerMovementSpeedModifier *= 1.1f;
+                }
+                else
+                {
+                    SkillProcessHandler.Instance.PlayerMovementSpeedModifier *= 1.05f;
+                }
+            }
+
             Hide();
             ActivatedSkillCount++;
 

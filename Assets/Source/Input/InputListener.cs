@@ -1,4 +1,5 @@
 using System.Collections;
+using Skills;
 using UnityEngine;
 
 public class InputListener : MonoBehaviour
@@ -60,7 +61,7 @@ public class InputListener : MonoBehaviour
         _player.PlayerMovment.Move(
             _player.Rb,
             new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized,
-            _player.Speed
+            _player.Speed * SkillProcessHandler.Instance.PlayerMovementSpeedModifier
         );
     }
 
