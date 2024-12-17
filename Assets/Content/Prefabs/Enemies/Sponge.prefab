@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5659703417636764724}
   - component: {fileID: 2125103425852333416}
   - component: {fileID: 5431552393475495316}
+  - component: {fileID: 3111459135107619461}
   m_Layer: 7
   m_Name: Sponge
   m_TagString: Untagged
@@ -158,7 +159,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 10
-  m_LinearDrag: 5
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -211,3 +212,21 @@ MonoBehaviour:
     type: 3}
   _redImpulse: {fileID: 2125103425852333416}
   _spriteRenderer: {fileID: 4488098416848364136}
+--- !u!114 &3111459135107619461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3567518916593929972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f380e2d57d9faea479a91167925d1a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 0}
+  _smallFishPrefab: {fileID: 1280790476618381618, guid: 7d765ac6c133599479500929bd69e07e,
+    type: 3}
+  _animator: {fileID: 5030718697833511846}
+  _rb: {fileID: 5659703417636764724}
+  _maxCount: 13
