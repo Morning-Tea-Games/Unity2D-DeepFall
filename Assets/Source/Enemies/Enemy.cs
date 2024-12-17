@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using Skills;
 using UnityEngine;
 
 [
@@ -74,9 +75,12 @@ public class Enemy : MonoBehaviour
                 _property.DamageType,
                 this,
                 _property,
-                damage
+                damage * SkillProcessHandler.Instance.PlayerDamageModifier
             );
             activityHandler.Execute();
+            Debug.Log(
+                $"Enemy получил урон: {damage}, но с улучшениями он теперь {damage * SkillProcessHandler.Instance.PlayerDamageModifier}"
+            );
         }
     }
 

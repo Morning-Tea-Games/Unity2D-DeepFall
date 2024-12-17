@@ -36,7 +36,7 @@ public class InputListener : MonoBehaviour
 
     private void PauseHandler()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !_pauseManager.Permanent)
         {
             if (_pauseManager.isActiveAndEnabled)
             {

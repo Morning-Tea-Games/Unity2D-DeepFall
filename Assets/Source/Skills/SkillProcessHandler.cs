@@ -6,5 +6,6 @@ namespace Skills
         private static SkillProcessHandler _instance = new SkillProcessHandler();
 
         public float PlayerMovementSpeedModifier = 1f;
+        public float PlayerDamageModifier = 1f;
     }
 }

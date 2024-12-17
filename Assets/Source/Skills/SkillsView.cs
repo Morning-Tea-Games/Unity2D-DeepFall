@@ -115,6 +115,18 @@ namespace Skills
                 }
             }
 
+            if (skill.CurrentEvent == SkillEvent.Damage)
+            {
+                if (SkillProcessHandler.Instance.PlayerDamageModifier == 1f)
+                {
+                    SkillProcessHandler.Instance.PlayerDamageModifier *= 1.1f;
+                }
+                else
+                {
+                    SkillProcessHandler.Instance.PlayerDamageModifier *= 1.05f;
+                }
+            }
+
             Hide();
             ActivatedSkillCount++;
 
