@@ -195,6 +195,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1994613858}
     m_Modifications:
+    - target: {fileID: 246218134812465946, guid: c2a5d4417f94c404fba491f7feffb053,
+        type: 3}
+      propertyPath: _pauseManager
+      value: 
+      objectReference: {fileID: 8879380965140329504}
+    - target: {fileID: 246218134812465946, guid: c2a5d4417f94c404fba491f7feffb053,
+        type: 3}
+      propertyPath: _shopMenuPanel
+      value: 
+      objectReference: {fileID: 645737727}
     - target: {fileID: 5318675049540587045, guid: c2a5d4417f94c404fba491f7feffb053,
         type: 3}
       propertyPath: m_ChunkCullingBounds.x
@@ -731,6 +741,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daa25d0c8891bf4a9668670b6a96e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &645737727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5374966116046475396, guid: c4fe36560b48537469d091b9779197b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 572392179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1013511758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1106,6 +1122,7 @@ Transform:
   - {fileID: 1167954025}
   - {fileID: 543311053}
   - {fileID: 1911410151}
+  - {fileID: 1954908935}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1307342303 stripped
@@ -1276,6 +1293,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846091885}
   m_CullTransparentMesh: 1
+--- !u!1 &1852538139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8901267012911074110, guid: c2a5d4417f94c404fba491f7feffb053,
+    type: 3}
+  m_PrefabInstance: {fileID: 325404434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1903807274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,6 +1385,54 @@ MonoBehaviour:
   _skillsViewPrefab: {fileID: 2591921976794530241, guid: 0b3bd101ff7817946ab2fcb29f401e80,
     type: 3}
   _skillsViewParent: {fileID: 107685758}
+--- !u!1 &1954908934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1954908935}
+  - component: {fileID: 1954908936}
+  m_Layer: 0
+  m_Name: MapController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1954908935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954908934}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1241198441}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1954908936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954908934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11aecb3e71bcf134e91f1fb1f2c13e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startMap: {fileID: 2116090923}
+  _maps:
+  - {fileID: 1852538139}
+  - {fileID: 2116090923}
 --- !u!1 &1994613857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,6 +1632,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2042989085}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2116090923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2124401316982505599, guid: b1fd3d295258aba46945246b7829b8aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 338773318178241072}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &338773318178241072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1624,6 +1701,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleMap
       objectReference: {fileID: 0}
+    - target: {fileID: 6697161469476981271, guid: b1fd3d295258aba46945246b7829b8aa,
+        type: 3}
+      propertyPath: _mapController
+      value: 
+      objectReference: {fileID: 1954908936}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
