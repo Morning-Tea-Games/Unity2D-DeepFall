@@ -255,6 +255,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopLocation
       objectReference: {fileID: 0}
+    - target: {fileID: 8901267012911074110, guid: c2a5d4417f94c404fba491f7feffb053,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1618,11 +1623,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SimpleMap
-      objectReference: {fileID: 0}
-    - target: {fileID: 2124401316982505599, guid: b1fd3d295258aba46945246b7829b8aa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
