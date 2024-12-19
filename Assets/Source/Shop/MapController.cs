@@ -23,7 +23,7 @@ public class MapController : MonoBehaviour
     public void ChangeMap(int index)
     {
         _currentMap.SetActive(false);
-        _maps[index].SetActive(true);
         _currentMap = _maps[index];
+        _maps[index]?.SetActive(true);
     }
 }
