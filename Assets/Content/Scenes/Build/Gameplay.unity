@@ -5105,9 +5105,10 @@ MonoBehaviour:
   _avaibleSkills:
   - {fileID: 11400000, guid: 0d0ed091cda59cb408da160d2ad700c1, type: 2}
   - {fileID: 11400000, guid: 9f787dc1e215dfa49a9a9947b0b313d0, type: 2}
-  - {fileID: 11400000, guid: 3d50d216bcac1b74fac2383a860511ec, type: 2}
   - {fileID: 11400000, guid: cdf8c9c97c47b324990aa6d73964d412, type: 2}
   - {fileID: 11400000, guid: 06affcc9ea64962479ad13fc3c3d05e2, type: 2}
+  - {fileID: 11400000, guid: cc39c3b52581fe94894a2513e1dd4561, type: 2}
+  - {fileID: 11400000, guid: a676600e948b5b14999bcdedf0f2196f, type: 2}
   _skillsViewPrefab: {fileID: 2591921976794530241, guid: 0b3bd101ff7817946ab2fcb29f401e80,
     type: 3}
   _skillsViewParent: {fileID: 107685758}
