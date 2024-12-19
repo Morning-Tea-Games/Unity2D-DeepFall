@@ -40,6 +40,8 @@ namespace Skills
 
         private void OnEnable()
         {
+            _pause = FindAnyObjectByType<PauseManager>();
+
             foreach (var button in _skillButtons)
             {
                 button.Button.onClick.AddListener(() => ChoiseSkill(button));

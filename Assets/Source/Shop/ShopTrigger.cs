@@ -19,5 +19,12 @@ namespace ShopSystem
                 _shopMenuPanel.SetActive(true);
             }
         }
+
+        public void CloseShop()
+        {
+            _pauseManager.Permanent = false;
+            _pauseManager.Hide();
+            _shopMenuPanel.SetActive(false);
+        }
     }
 }
